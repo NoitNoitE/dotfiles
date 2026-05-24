@@ -1,0 +1,9 @@
+include "./config.d/animation.kdl"
+include "./config.d/display.kdl"
+include "./config.d/keymaps.kdl"
+include "./config.d/misc.kdl"
+include "./config.d/rules.kdl"
+include "./config.d/input.kdl"
+include "./config.d/layout.kdl"
+include "./noctalia.kdl"
+

@@ -1,0 +1,37 @@
+layer-rule {
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
+}
+
+/-window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+    opacity 0.95
+    draw-border-with-background false
+}
+
+window-rule {
+    // Floating windows by default
+    match app-id=r#"^steam$"# title=r#"^(Steam - News|Special Offers|notificationtoasts)"#
+    match app-id=r#"steam"# title="^Friends List$"
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"QQ"# title=r#"图片查看器"#
+    match app-id=r#"QQ"# title=r#"的聊天记录"#
+    match app-id="org.gnome.Nautilus" title="pop-up"
+    match app-id=r#"com.gabm.satty"# title="satty"
+    match app-id="waypaper"
+    match app-id="clipse-gui"
+    match app-id="LocalSend"
+    open-floating true
+}
+

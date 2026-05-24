@@ -1,0 +1,32 @@
+{
+    "chat.commandCenter.enabled": false,
+    "editor.fontSize": 12,
+    "editor.fontFamily": "'Maple Mono NF Medium'",
+    "chat.viewTitle.enabled": false,
+    "chat.viewWelcome.enabled": false,
+    "chat.viewSessions.enabled": false,
+    "editor.fontLigatures": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.languageServer": "Default",
+    "workbench.browser.showInTitleBar": true,
+    "chat.agentsControl.enabled": false,
+    "workbench.colorTheme": "KanagawaTheme",
+    "chat.contextUsage.enabled": false,
+    "chat.undoRequests.restoreInput": false,
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "editor.minimap.enabled": false,
+    "chat.titleBar.signIn.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.startupEditor": "none",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.errorSquiggles": "enabled",
+    "[cpp]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.stickyScroll.defaultModel": "foldingProviderModel",
+        "editor.suggest.insertMode": "replace"
+    },
+    "editor.inlineSuggest.edits.showCollapsed": true
+}
