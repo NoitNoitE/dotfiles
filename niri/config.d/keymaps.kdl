@@ -3,24 +3,24 @@ binds {
     Mod+Shift+B { spawn "firefox"; }
     Mod+Shift+E { spawn-sh "env GSK_RENDERER=gl GSK_RENDERER=gl GTK_IM_MODULE=fcitx nautilus"; }
     Mod+Shift+T hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
-    Mod+D { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+S { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-    Mod+Slash { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Slash { spawn-sh "noctalia msg settings-toggle"; }
     Mod+Alt+V { spawn "clipse-gui"; }
     Mod+F1 hotkey-overlay-title="Restart Fcitx5" { spawn-sh "pkill fcitx5 || fcitx5"; }
-    Mod+Shift+P { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
-    Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Shift+P { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "noctalia msg session lock"; }
     Mod+Shift+Escape { quit; }
     Mod+Shift+Delete { power-off-monitors; }
-    Mod+Escape { spawn-sh "qs -c noctalia-shell ipc call idleInhibitor toggle"; }
+    Mod+Escape { spawn-sh "noctalia msg caffeine-toggle"; }
 
     // --- Media & Hardware ---
     XF86AudioMicMute allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
 
     // --- Media Controls (Playerctl) ---
     XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }

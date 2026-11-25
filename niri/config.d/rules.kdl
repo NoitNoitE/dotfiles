@@ -1,37 +1,47 @@
-layer-rule {
-    match namespace="^noctalia-overview*"
-    place-within-backdrop true
+// Global Rules
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+    opacity 1.00
+    draw-border-with-background false
 }
 
+// Overlay wallpaper config
 layer-rule {
     match namespace="^noctalia-wallpaper*"
     place-within-backdrop true
 }
 
-/-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
+// Floating windows by default
 window-rule {
-    geometry-corner-radius 3
-    clip-to-geometry true
-    opacity 0.95
-    draw-border-with-background false
-}
-
-window-rule {
-    // Floating windows by default
+    match app-id=r#"QQ"# title=r#"图片查看器"#
+    match app-id=r#"QQ"# title=r#"的聊天记录"#
+    match app-id=r#"QQ"# title=r#"视频播放器"#
+    match app-id=r#"QQ"# title=r#"资料卡"#
     match app-id=r#"^steam$"# title=r#"^(Steam - News|Special Offers|notificationtoasts)"#
     match app-id=r#"steam"# title="^Friends List$"
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id=r#"QQ"# title=r#"图片查看器"#
-    match app-id=r#"QQ"# title=r#"的聊天记录"#
-    match app-id="org.gnome.Nautilus" title="pop-up"
+	match app-id=r#"firefox$" title="^Extension:$"
     match app-id=r#"com.gabm.satty"# title="satty"
     match app-id="waypaper"
     match app-id="clipse-gui"
     match app-id="LocalSend"
+    match app-id="dev.noctalia.Noctalia"
+	match app-id="zoom" title="^annotate_toolbar$"
     open-floating true
+    open-focused false
+	focus-ring {
+		off
+	}
 }
 
+window-rule {
+    match app-id="Nautilus"
+    popups {
+        geometry-corner-radius 15
+        opacity 0.8
+        background-effect {
+            blur true
+        }
+    }
+}

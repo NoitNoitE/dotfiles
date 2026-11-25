@@ -10,14 +10,12 @@
     "python.languageServer": "Default",
     "workbench.browser.showInTitleBar": true,
     "chat.agentsControl.enabled": false,
-    "workbench.colorTheme": "KanagawaTheme",
     "chat.contextUsage.enabled": false,
     "chat.undoRequests.restoreInput": false,
     "workbench.secondarySideBar.defaultVisibility": "visible",
     "editor.minimap.enabled": false,
     "chat.titleBar.signIn.enabled": false,
     "workbench.navigationControl.enabled": false,
-    "window.menuBarVisibility": "compact",
     "workbench.startupEditor": "none",
     "C_Cpp.intelliSenseEngine": "default",
     "C_Cpp.autocompleteAddParentheses": true,
@@ -28,5 +26,37 @@
         "editor.stickyScroll.defaultModel": "foldingProviderModel",
         "editor.suggest.insertMode": "replace"
     },
-    "editor.inlineSuggest.edits.showCollapsed": true
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "chat.mcp.gallery.enabled": true,
+    "chatgpt.localeOverride": "en-US",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "window.menuBarVisibility": "compact",
+    "workbench.activityBar.compact": true,
+    "workbench.iconTheme": "a-file-icon-vscode",
+    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+    "workbench.colorTheme": "Min Dark",
+    "workbench.secondarySideBar.showLabels": false,
+    "workbench.editorAssociations": {
+        "*.zip": "default"
+    },
+    "makefile.configureOnOpen": true,
+    "sigasi.server.arguments": [
+        "-Xmx12g",
+        "-Xss4m",
+        "-XX:+IgnoreUnrecognizedVMOptions",
+        "-XX:G1PeriodicGCInterval=60000",
+        "-XX:-G1PeriodicGCInvokesConcurrent",
+        "-XX:MinHeapFreeRatio=5",
+        "-XX:MaxHeapFreeRatio=30"
+    ],
+    "sigasi.emailAddress": "tsukimuratemari@noirp.dev",
+    "sigasi.enableTalkback": true,
+    "sigasi.useCommunityEdition": true,
+    "[python]": {
+        
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never"
+    }
 }

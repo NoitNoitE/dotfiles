@@ -21,7 +21,7 @@ input {
 
     trackpoint {}
 
-    warp-mouse-to-focus
+    //warp-mouse-to-focus
 }
 
 gestures {

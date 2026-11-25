@@ -1,0 +1,420 @@
+[audio]
+enable_overdrive = false
+enable_sounds = false
+
+[bar]
+order = ["default"]
+
+[bar.default]
+enabled = true
+position = "left"
+thickness = 39
+background_opacity = 0.0
+border_width = 0.0
+capsule = false
+concave_edge_corners = false
+margin_ends = 0
+margin_edge = 0
+padding = 0
+widget_spacing = 3
+scale = 1.1
+reserve_space = true
+show_on_workspace_switch = true
+start = ["workspaces", "active_window", "media"]
+center = ["power_profile", "battery", "clock", "cpu", "temp", "ram", "gap"]
+end = ["tray", "notifications", "volume", "brightness", "caffeine", "network", "bluetooth", "control-center"]
+
+[bar.default.monitor."eDP-2"]
+enabled = false
+
+[bar.default.monitor."HDMI-A-1"]
+enabled = false
+
+[battery]
+warning_threshold = 20
+
+[calendar]
+enabled = true
+
+[control_center]
+show_shortcut_labels = true
+
+[control_center.calendar]
+show_week_numbers = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "wallpaper"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[desktop_widgets]
+enabled = true
+schema_version = 2
+widget_order = ["memory", "weather", "cpu", "network", "audio", "clock", "gpu"]
+
+[desktop_widgets.grid]
+visible = true
+cell_size = 16
+major_interval = 4
+
+# ponytail: v4 stored top-left plus scale; these centers preserve that geometry approximately.
+[desktop_widgets.widget.memory]
+type = "sysmon"
+output = "eDP-1"
+cx = 147.5
+cy = 373.8
+box_width = 175.1
+box_height = 87.5
+rotation = 0.0
+
+[desktop_widgets.widget.memory.settings]
+display = "graph"
+stat = "ram_pct"
+background = true
+background_radius = 0.0
+
+[desktop_widgets.widget.weather]
+type = "weather"
+output = "eDP-1"
+cx = 721.9
+cy = 71.7
+box_width = 243.8
+box_height = 83.3
+rotation = 0.0
+
+[desktop_widgets.widget.weather.settings]
+background = false
+
+[desktop_widgets.widget.cpu]
+type = "sysmon"
+output = "eDP-1"
+cx = 146.0
+cy = 253.0
+box_width = 171.9
+box_height = 86.0
+rotation = 0.0
+
+[desktop_widgets.widget.cpu.settings]
+display = "graph"
+stat = "cpu_usage"
+background = true
+
+[desktop_widgets.widget.network]
+type = "sysmon"
+output = "eDP-1"
+cx = 149.9
+cy = 495.0
+box_width = 179.9
+box_height = 89.9
+rotation = 0.0
+
+[desktop_widgets.widget.network.settings]
+display = "graph"
+stat = "net_rx"
+stat2 = "net_tx"
+background = true
+
+[desktop_widgets.widget.audio]
+type = "audio_visualizer"
+output = "eDP-1"
+cx = 735.0
+cy = 643.1
+box_width = 330.0
+box_height = 206.3
+rotation = 0.0
+
+[desktop_widgets.widget.audio.settings]
+mirrored = true
+centered = false
+show_when_idle = false
+color_1 = "primary"
+color_2 = "primary"
+background = false
+
+[desktop_widgets.widget.clock]
+type = "clock"
+output = "eDP-1"
+cx = 719.5
+cy = 419.5
+box_width = 119.0
+box_height = 119.0
+rotation = 0.0
+
+[desktop_widgets.widget.clock.settings]
+clock_style = "digital"
+format = "{:%H:%M}\n{:%-d %B %Y}"
+color = "primary"
+background = false
+
+[desktop_widgets.widget.gpu]
+type = "sysmon"
+output = "eDP-1"
+cx = 150.0
+cy = 615.0
+box_width = 180.0
+box_height = 90.0
+rotation = 0.0
+
+[desktop_widgets.widget.gpu.settings]
+display = "graph"
+stat = "gpu_usage"
+background = true
+
+[dock]
+enabled = true
+position = "bottom"
+active_monitor_only = true
+auto_hide = true
+smart_auto_hide = false
+reserve_space = false
+layer = "overlay"
+background_opacity = 0.95
+inactive_opacity = 0.5
+magnification = false
+show_instance_count = false
+show_dots = false
+launcher_position = "none"
+pinned = []
+
+[location]
+auto_locate = true
+
+[lockscreen]
+enabled = true
+lock_before_suspend = true
+blurred_desktop = true
+blur_intensity = 0.2
+tint_intensity = 0.0
+monitors = ["eDP-2"]
+
+[notification]
+enable_daemon = true
+background_opacity = 0.6
+position = "top_right"
+layer = "overlay"
+
+[osd]
+enabled = true
+background_opacity = 1.0
+position = "top_right"
+position_vertical = "top_right"
+monitors = ["eDP-1", "HDMI-A-1"]
+
+[osd.kinds]
+bluetooth = false
+brightness = true
+caffeine = false
+dnd = false
+keyboard_backlight = false
+keyboard_layout = true
+lock_keys = false
+media = true
+nightlight = false
+power_profile = false
+privacy = false
+volume = true
+volume_input = true
+volume_output = true
+wifi = false
+
+[plugins]
+auto_update = "none"
+enabled = []
+
+[shell]
+avatar_path = "/home/NoirP/Pictures/back.png"
+clipboard_auto_paste = "off"
+clipboard_enabled = false
+font_family = "Noto Sans CJK JP Black"
+lang = "en-GB"
+telemetry_enabled = false
+time_format = "{:%H:%M}"
+
+[shell.animation]
+enabled = true
+speed = 1.0
+
+[shell.launcher]
+auto_paste = "off"
+categories = true
+app_grid = false
+show_icons = true
+sort_by_usage = true
+pinned = ["Alacritty", "xterm", "kitty", "discord", "Clash Verge", "firefox-developer-edition", "firefox", "helium"]
+
+[shell.launcher.providers.session]
+global = true
+
+[shell.launcher.providers.windows]
+global = true
+
+[shell.mpris]
+blacklist = ["discord"]
+
+[shell.panel]
+transparency_mode = "soft"
+launcher_placement = "floating"
+launcher_position = "center"
+control_center_placement = "attached"
+open_near_click_control_center = true
+session_placement = "floating"
+session_position = "center"
+wallpaper_placement = "attached"
+
+[shell.session]
+grid = true
+grid_columns = 3
+show_shortcuts = true
+
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 3.0
+shortcut = "1"
+
+[[shell.session.actions]]
+action = "suspend"
+countdown_seconds = 3.0
+shortcut = "2"
+
+[[shell.session.actions]]
+action = "command"
+label = "Hibernate"
+glyph = "snowflake"
+command = "systemctl hibernate"
+countdown_seconds = 3.0
+shortcut = "3"
+
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 3.0
+shortcut = "4"
+variant = "destructive"
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 3.0
+shortcut = "5"
+
+[[shell.session.actions]]
+action = "command"
+label = "Reboot to UEFI"
+glyph = "settings-automation"
+command = "systemctl reboot --firmware-setup"
+countdown_seconds = 3.0
+shortcut = "6"
+
+[shell.shadow]
+direction = "down_right"
+
+[system.monitor]
+enabled = true
+cpu_usage_activity_threshold = 80.0
+cpu_usage_critical_threshold = 90.0
+cpu_temp_activity_threshold = 70.0
+cpu_temp_critical_threshold = 80.0
+gpu_temp_activity_threshold = 70.0
+gpu_temp_critical_threshold = 80.0
+gpu_usage_activity_threshold = 70.0
+gpu_usage_critical_threshold = 80.0
+ram_pct_activity_threshold = 80.0
+ram_pct_critical_threshold = 90.0
+swap_pct_activity_threshold = 80.0
+swap_pct_critical_threshold = 90.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 90.0
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "Shinonome"
+pure_black_dark = false
+
+[theme.templates]
+enable_builtin_templates = true
+enable_community_templates = true
+builtin_ids = ["gtk3", "gtk4", "niri", "btop", "qt", "starship", "cava", "kcolorscheme", "kitty"]
+community_ids = ["steam", "discord", "yazi", "vscode"]
+
+[wallpaper]
+enabled = true
+directory = "/home/NoirP/Pictures/wallpapers"
+fill_color = "#ffffff"
+fill_mode = "crop"
+per_monitor_directories = false
+transition = ["fade", "disc", "stripes", "wipe", "pixelate", "honeycomb"]
+transition_duration = 1500.0
+transition_on_startup = true
+
+[wallpaper.automation]
+enabled = false
+interval_seconds = 300
+order = "random"
+recursive = true
+
+[weather]
+enabled = true
+effects = true
+
+[widget.active_window]
+max_length = 145.0
+title_scroll = "on_hover"
+display = "icon_and_text"
+show_empty_label = false
+
+[widget.clock]
+format = "{:%H:%M %a, %b %d}"
+vertical_format = "{:%d\n%m\n%y\n%H\n%M\n%S}"
+tooltip_format = "{:%H:%M %a, %b %d}"
+color = "error"
+font_family = "Maple Mono NF ExtraBold"
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+
+[widget.gap]
+type = "spacer"
+length = 100
+
+[widget.media]
+artist_first = true
+max_length = 145.0
+title_scroll = "on_hover"
+color = "error"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+
+[widget.temp]
+type = "sysmon"
+stat = "cpu_temp"
+
+[widget.volume.actions]
+middle = "exec pwvucontrol || pavucontrol"
+
+[widget.workspaces]
+style = "regular"
+show_labels = true
+label_source = "id"
+max_label_chars = 2
+labels_only_when_occupied = true
+hide_when_empty = true
+pill_scale = 0.6
+focused_color = "primary"
+occupied_color = "secondary"
+font_weight = 700
+scale = 0.88

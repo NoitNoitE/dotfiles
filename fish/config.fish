@@ -20,10 +20,8 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias ls="eza --icons --no-permissions"
 alias vim="nvim"
-alias sudo="sudo-rs"
-alias sudoedit="sudoedit-rs"
-alias visudo="visudo-rs"
-alias su="su-rs"
+# ssh stuff
+alias ssh="kitty +kitten ssh"
 
 function rf
 	source ~/.config/fish/config.fish

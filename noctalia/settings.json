@@ -44,7 +44,7 @@
         "spectrumMirrored": true,
         "visualizerType": "linear",
         "volumeFeedback": false,
-        "volumeFeedbackSoundFile": "",
+        "volumeFeedbackSoundFile": "/home/NoirP/Music/[Hi-Res][250813]『学園アイドルマスター』藤田ことね(CV.飯田ヒカル)「自己肯定感爆上げ↑↑しゅきしゅきソング」[96kHz／24bit][FLAC]/01.自己肯定感爆上げ↑↑しゅきしゅきソング.flac",
         "volumeOverdrive": false,
         "volumeStep": 5
     },
@@ -56,7 +56,7 @@
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
         "contentPadding": 0,
-        "density": "default",
+        "density": "comfortable",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "fontScale": 1.1,
@@ -76,7 +76,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": false,
-        "position": "bottom",
+        "position": "left",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -85,7 +85,7 @@
             {
                 "density": "compact",
                 "displayMode": "always_visible",
-                "enabled": true,
+                "enabled": false,
                 "name": "HDMI-A-1",
                 "position": "bottom",
                 "widgets": {
@@ -352,7 +352,7 @@
                     "maxWidth": 145,
                     "panelShowAlbumArt": false,
                     "scrollingMode": "hover",
-                    "showAlbumArt": false,
+                    "showAlbumArt": true,
                     "showArtistFirst": true,
                     "showProgressRing": false,
                     "showVisualizer": true,
@@ -454,7 +454,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "HDMI-A-1",
-        "predefinedScheme": "Kanagawa Paper",
+        "predefinedScheme": "Shinonome",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": false
@@ -659,8 +659,8 @@
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
         "animationSpeed": 1,
-        "autoStartAuth": true,
-        "avatarImage": "/home/NoirP/Pictures/3316x3316.png",
+        "autoStartAuth": false,
+        "avatarImage": "/home/NoirP/Pictures/back.png",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -696,7 +696,7 @@
                 "Up"
             ]
         },
-        "language": "",
+        "language": "en-GB",
         "lockOnSuspend": true,
         "lockScreenAnimations": true,
         "lockScreenBlur": 0.2,
@@ -718,7 +718,7 @@
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
-        "telemetryEnabled": true
+        "telemetryEnabled": false
     },
     "hooks": {
         "colorGeneration": "",
@@ -733,26 +733,26 @@
         "wallpaperChange": ""
     },
     "idle": {
-        "customCommands": "[]",
-        "enabled": true,
-        "fadeDuration": 8,
+        "customCommands": "[{\"name\":\"Hyprlock Hook\",\"timeout\":235,\"command\":\"swayidle before-sleep \\\"hyprlock\\\"\",\"resumeCommand\":\"\"}]",
+        "enabled": false,
+        "fadeDuration": 5,
         "lockCommand": "",
-        "lockTimeout": 302,
+        "lockTimeout": 0,
         "resumeLockCommand": "",
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
-        "screenOffTimeout": 300,
+        "screenOffTimeout": 230,
         "suspendCommand": "",
-        "suspendTimeout": 900
+        "suspendTimeout": 0
     },
     "location": {
         "analogClockInCalendar": false,
-        "autoLocate": false,
+        "autoLocate": true,
         "firstDayOfWeek": 0,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Hong Kong",
+        "name": "Zurich",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": true,
@@ -765,7 +765,7 @@
     "network": {
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
@@ -965,23 +965,35 @@
             {
                 "enabled": true,
                 "id": "starship"
+            },
+            {
+                "enabled": true,
+                "id": "cava"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
             }
         ],
         "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Noto Sans CJK HK Medium",
+        "fontDefault": "Noto Sans CJK JP Black",
         "fontDefaultScale": 1.05,
-        "fontFixed": "Maple Mono NF",
+        "fontFixed": "Maple Mono NF Medium",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 1,
+        "panelBackgroundOpacity": 0.8,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
-        "settingsPanelMode": "attached",
-        "settingsPanelSideBarCardStyle": false,
+        "settingsPanelMode": "window",
+        "settingsPanelSideBarCardStyle": true,
         "tooltipsEnabled": true,
-        "translucentWidgets": false
+        "translucentWidgets": true
     },
     "wallpaper": {
         "automationEnabled": false,
@@ -991,7 +1003,7 @@
         "favorites": [
         ],
         "fillColor": "#ffffff",
-        "fillMode": "center",
+        "fillMode": "crop",
         "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
@@ -1015,7 +1027,7 @@
         "showHiddenFiles": true,
         "skipStartupTransition": false,
         "solidColor": "#1a1a2e",
-        "sortOrder": "name",
+        "sortOrder": "date_asc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
@@ -1029,7 +1041,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "browse",
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
